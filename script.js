@@ -1,1 +1,0 @@
-const reasons=['Your smile','Your heart','The way you love'];function showReason(){document.getElementById('reason').innerText=reasons[Math.floor(Math.random()*reasons.length)];}
