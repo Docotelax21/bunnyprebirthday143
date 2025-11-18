@@ -1,1 +1,0 @@
-Aqeelah pre-birthday site. Replace assets/photo1.jpg and photo2.jpg with your real photos.
