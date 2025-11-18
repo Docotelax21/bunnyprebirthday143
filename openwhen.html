@@ -1,1 +1,42 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Open-When</title><link rel="stylesheet" href="styles.css"></head><body><div class="container header"><div class="title">143 — for you <span style="color:var(--accent)">💖</span></div><div class="nav"><a href="index.html">Home</a><a href="143.html">143 Hearts</a><a class="active" href="openwhen.html">Open-When</a></div></div><div class="container"><div class="section-title">Open-When Letters</div><div class="open-grid"><div class="open-card"><h3>Open when you're sad</h3><p>When you're sad, remember the laugh in the dark Shell garage — I'm here.</p></div><div class="open-card"><h3>Open when you miss me</h3><p>If you miss me, close your eyes and imagine my arms.</p></div><div class="open-card"><h3>Open when you doubt yourself</h3><p>You are stronger than you think. I'm proud of you.</p></div></div></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Open-When — Aqeelah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="143.html">143</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="polaroid.html">Polaroids</a>
+    <a href="paths.html">Paths</a>
+    <a href="openwhen.html" class="active">Open-When</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Open-When Letters</h1>
+      <p class="subtitle">Short notes for the moments she needs them most.</p>
+    </header>
+
+    <div class="open-grid">
+      <button class="open-card" data-key="sad">Open when you're sad</button>
+      <button class="open-card" data-key="lonely">Open when you feel lonely</button>
+      <button class="open-card" data-key="miss">Open when you miss me</button>
+      <button class="open-card" data-key="doubt">Open when you doubt yourself</button>
+      <button class="open-card" data-key="sleep">Open when you can't sleep</button>
+      <button class="open-card" data-key="stressed">Open when you're stressed</button>
+      <button class="open-card" data-key="smile">Open when you need a smile</button>
+    </div>
+
+    <div class="reason-panel" id="openDisplay">Tap a card above to open the letter.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
