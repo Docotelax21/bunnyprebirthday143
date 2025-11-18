@@ -1,1 +1,52 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Extras</title><link rel="stylesheet" href="styles.css"></head><body><div class="container header"><div class="title">143 — for you <span style="color:var(--accent)">💖</span></div><div class="nav"><a href="index.html">Home</a><a href="143.html">143 Hearts</a><a class="active" href="extras.html">Extras</a></div></div><div class="container"><div class="section-title">Extras</div><div class="extras-row"><div class="extra"><h3>Shake to Reveal</h3><p>your real gift will come on 19 march at 01:00 exactly 143 hours before your birthday.</p></div><div class="extra"><h3>Miss-Me Button</h3><p>Press for a comforting message.</p></div><div class="extra"><h3>Gift Box</h3><p>Tap the box to open your surprise.</p><div id="giftBox" style="margin-top:10px;padding:20px;background:#0f1724;border-radius:8px;text-align:center;cursor:pointer">🎁</div></div></div></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Extras — Aqeelah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="143.html">143</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="polaroid.html">Polaroids</a>
+    <a href="paths.html">Paths</a>
+    <a href="openwhen.html">Open-When</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="extras.html" class="active">Extras</a>
+  </nav>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Extras</h1>
+      <p class="subtitle">Little surprises and playful things.</p>
+    </header>
+
+    <div class="extras-row">
+      <div class="extra">
+        <h3>Shake to Reveal</h3>
+        <p>Tap to see the message about the real gift.</p>
+        <button id="shakeBtn" class="btn">Reveal</button>
+      </div>
+
+      <div class="extra">
+        <h3>Miss-Me Button</h3>
+        <p>Random comforting lines to press when she misses you.</p>
+        <button id="missBtn" class="btn">Miss-Me</button>
+      </div>
+
+      <div class="extra">
+        <h3>Gift Box</h3>
+        <p>Tap to reveal a small snippet of your real gift.</p>
+        <div id="giftBox" class="gift-box">🎁</div>
+      </div>
+    </div>
+
+    <div class="reason-panel" id="extrasOutput">Try the extras above.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
