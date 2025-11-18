@@ -1,47 +1,71 @@
+/* Shared script for hearts, polaroids, open-when, extras */
+document.addEventListener('DOMContentLoaded', () => {
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  const messages = [
+  // SAMPLE MESSAGES (for demo) — replace / expand with your full 143 messages array
+  const MESSAGES = [
     "I love the way your smile starts my day.",
     "Your laugh is my favourite song.",
-    "I love your hands—they fit perfectly in mine.",
-    "How you make tea on rainy days.",
+    "I love your hands they fit perfectly in mine.",
+    "How you always make everyting feel cozy.",
     "Your stubbornness when you're right.",
-    "The little notes you hide for me.",
+    "The way you look at me.",
     "How you make food taste like home.",
-    "You dancing in the kitchen at midnight.",
+    "You always making tiktoks.",
     "The way you look when concentrating.",
-    "Your texts that turn my bad days around."
+    "becuase you're the best girlfriend."
   ];
-  const grid = document.getElementById('heartsGrid');
-  const reasonBox = document.getElementById('reasonPanel');
-  if(grid){
-    for(let i=1;i<=143;i++){
-      const div=document.createElement('div');
-      div.className='heart';
-      div.dataset.index=(i-1)%messages.length;
-      div.innerHTML='<span class="icon">❤</span>';
-      div.addEventListener('click', ()=>{
-        if(div.classList.contains('revealed')){ div.classList.remove('revealed'); reasonBox.textContent=''; return; }
-        document.querySelectorAll('.heart.revealed').forEach(h=>h.classList.remove('revealed'));
+
+  // Populate hearts grid (used on index.html and 143.html)
+  const heartsGrid = document.getElementById('heartsGrid');
+  const reasonPanel = document.getElementById('reasonPanel');
+  if (heartsGrid && reasonPanel) {
+    // Clear existing
+    heartsGrid.innerHTML = '';
+    for (let i = 1; i <= 143; i++) {
+      const div = document.createElement('div');
+      div.className = 'heart';
+      // cycle messages so demo works — replace with full array mapping if you paste 143 messages
+      const msgIndex = (i - 1) % MESSAGES.length;
+      div.dataset.msg = MESSAGES[msgIndex];
+      div.innerHTML = '<span class="icon">❤</span>';
+      div.addEventListener('click', () => {
+        // toggle reveal
+        if (div.classList.contains('revealed')) {
+          div.classList.remove('revealed');
+          reasonPanel.textContent = '';
+          return;
+        }
+        // hide any other revealed
+        document.querySelectorAll('.heart.revealed').forEach(h => h.classList.remove('revealed'));
         div.classList.add('revealed');
-        reasonBox.textContent = (i) + '. ' + messages[div.dataset.index];
+        reasonPanel.textContent = i + '. ' + div.dataset.msg;
       });
-      grid.appendChild(div);
+      heartsGrid.appendChild(div);
     }
   }
-  document.querySelectorAll('.polaroid').forEach(p=>{
-    p.addEventListener('click', ()=>{
+
+  // Polaroid click: open full image in new tab (simple lightbox)
+  document.querySelectorAll('.polaroid').forEach(p => {
+    p.addEventListener('click', () => {
       const img = p.querySelector('img');
-      const src = img.src;
-      window.open(src, '_blank');
+      if (img && img.src) window.open(img.src, '_blank');
     });
   });
-  const quizBtn = document.getElementById('quizSubmit');
-  if(quizBtn){
-    quizBtn.addEventListener('click', ()=>{ alert('Quiz submitted'); });
-  }
+
+  // Extras: gift box click (if present)
   const gift = document.getElementById('giftBox');
-  if(gift){
-    gift.addEventListener('click', ()=>{ alert('Surprise: your real gift comes on 19 March at 01:00 — 143 hours before her birthday.'); });
+  if (gift) {
+    gift.addEventListener('click', () => {
+      alert('Surprise: your real gift will come on 19 March at 01:00 — 143 hours before her birthday.');
+    });
   }
+
+  // Quiz stub (if present)
+  const quizBtn = document.getElementById('quizSubmit');
+  if (quizBtn) {
+    quizBtn.addEventListener('click', () => {
+      alert('Quiz submitted — customize script.js to show a friendly result message.');
+    });
+  }
+
 });
