@@ -1,1 +1,38 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Paths</title><link rel="stylesheet" href="styles.css"></head><body><div class="container header"><div class="title">143 — for you <span style="color:var(--accent)">💖</span></div><div class="nav"><a href="index.html">Home</a><a href="143.html">143 Hearts</a><a class="active" href="paths.html">Paths</a></div></div><div class="container"><div class="section-title">Choose a Path</div><div class="polaroid-row"><div class="polaroid"><div class="caption">Path 1</div></div><div class="polaroid"><div class="caption">Path 2</div></div></div><div class="reason-panel">Your chosen path will appear here.</div></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paths — Aqeelah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="143.html">143</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="polaroid.html">Polaroids</a>
+    <a href="paths.html" class="active">Paths</a>
+    <a href="openwhen.html">Open-When</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Choose a Path</h1>
+      <p class="subtitle">Little journeys — choose one to reveal a special note.</p>
+    </header>
+
+    <div class="polaroid-row">
+      <div class="polaroid" data-path="adventure"><div class="caption">Birthday Getaway — Adventure</div></div>
+      <div class="polaroid" data-path="cozy"><div class="caption">Cozy Weekend — Wholesome</div></div>
+      <div class="polaroid" data-path="spicy"><div class="caption">Spicy Night — Fun</div></div>
+    </div>
+
+    <div class="reason-panel" id="pathPanel">Pick a path to reveal a tailored surprise.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
