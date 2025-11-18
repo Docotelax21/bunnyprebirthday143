@@ -1,0 +1,1 @@
+Replace assets/* placeholders with your real photos. Upload entire folder to GitHub Pages root.
